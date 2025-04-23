@@ -1,7 +1,7 @@
-int add(int a, int b);
+float add(float a, float b);
 
-int substract(int a, int b);
+float substract(float a, float b);
 
-int multiply(int a, int b);
+float multiply(float a, float b);
 
-int divide(int a, int b);
+float divide(float a, float b);

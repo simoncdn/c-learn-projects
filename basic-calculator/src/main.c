@@ -9,15 +9,15 @@ enum Operator {
 };
 
 int main(void){
-	int a, b;
+	float a, b;
 	int input;
   char operator;
-  int total;
+  float total;
 
 
 	// 1st Step
 	printf("Enter a number: ");
-	input = scanf("%d", &a);
+	input = scanf("%f", &a);
 
 	if(input != 1 ){
 		printf("Error: This is not a valid integer.\n");
@@ -35,7 +35,7 @@ int main(void){
 
 	// 3rd Step
 	printf("Enter your second number: ");
-	input = scanf("%d", &b);
+	input = scanf("%f", &b);
 
 	if(input != 1){
 		printf("Error: This is not a valid integer.\n");
@@ -60,7 +60,7 @@ int main(void){
 			printf("Sorry this case doesn't work.\n");
 	}
 
-	printf("Total: %d\n", total);
+	printf("Total: %.2f\n", total);
 
 	return 0;
 }
