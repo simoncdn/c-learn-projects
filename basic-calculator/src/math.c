@@ -1,23 +1,29 @@
-#include "math.h"
+#pragma once
+
 #include <stdio.h>
+#include "validator.c"
 
-float add(float a, float b) {
-	return a + b;
-}
-
-float substract(float a, float b){
-	return a - b;
-}
-
-float multiply(float a, float b){
-	return a * b;
-}
-
-float divide(float a, float b){
-	if (b == 0) {
-		printf("Error: You can't devide by 0 value!\n");
+float calculate(float a, float b, operator_t op){
+	if(!isValidOperator(op)){
+		printf("\033[1;31mError:\033[0m Invalid operator.\n");
 		return 0;
 	}
 
-	return a / b;
+	switch(op){
+		case ADD:
+			return a + b;
+		case SUB:
+			 return a - b;
+		case DIV:
+			if(!isSafeDivision(b)){
+				printf("\033[1;31mError:\033[0m Division by zero is not allowed.\n");
+				return 0;
+			}
+			return a / b;
+		case MUL:
+			return a * b;
+		default:
+			printf("\033[1;31mError:\033[0m Invalid operator.\n");
+			return 0;
+	}
 }
