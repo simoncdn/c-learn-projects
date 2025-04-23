@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int add(int a, int b) {
-		return a + b;
+	return a + b;
 }
 
 int substract(int a, int b){
@@ -18,5 +18,6 @@ int divide(int a, int b){
 		printf("Error: You can't devide by 0 value!\n");
 		return 0;
 	}
+
 	return a / b;
 }
