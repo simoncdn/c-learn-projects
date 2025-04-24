@@ -1,7 +1,6 @@
-#pragma once
-
-#include "utils.c"
-#include "validator.c"
+#include "../include/utils.h"
+#include "../include/validator.h"
+#include "../include/promptOperator.h"
 #include <stdio.h>
 
 operator_t promptOperator(const char* prompt){

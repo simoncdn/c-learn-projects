@@ -1,6 +1,5 @@
-#include "math.c"
-#include "promptFloat.c"
-#include "promptOperator.c"
+#include "../include/math.h"
+#include "../include/promptFloat.h"
 #include <stdio.h>
 
 int main(void){

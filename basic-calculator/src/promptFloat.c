@@ -1,7 +1,5 @@
-#pragma once
-
-#include "../include/promtFloat.h"
-#include "utils.c"
+#include "../include/promptFloat.h"
+#include "../include/utils.h"
 #include <stdio.h>
 
 float promptFloat(const char* prompt){

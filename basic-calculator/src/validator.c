@@ -1,5 +1,3 @@
-#pragma once
-
 #include "../include/validator.h"
 #include "../include/promptOperator.h"
 

@@ -1,5 +1,3 @@
-#pragma once
-
 #include "../include/utils.h"
 #include <stdio.h>
 
