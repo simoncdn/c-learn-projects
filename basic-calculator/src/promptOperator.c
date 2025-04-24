@@ -13,13 +13,13 @@ operator_t promptOperator(const char* prompt){
 		input = scanf(" %c", &value);
 
 		if(input != 1 || isValidOperator(value)){
-			printf("\033[1;31mError:\033[0m Invalid input.\n");
+			printf("\033[1;31mError: Invalid input.\033[0m\n");
+
+			flushInput();
       continue;
 		}
 
 		break;
-
-		flushInput();
 	}
 
 	return value;

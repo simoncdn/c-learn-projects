@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../include/promtFloat.h"
-#include <stdio.h>
 #include "utils.c"
+#include <stdio.h>
 
 float promptFloat(const char* prompt){
 	float value;
@@ -10,14 +10,16 @@ float promptFloat(const char* prompt){
 
 	while (1) {
     printf("%s", prompt);
-    input = scanf("%f", &value);
+    input = scanf(" %f", &value);
 
-    if (input == 1) break;
-
-    printf("\033[1;31mError: This is not a valid number.\033[0m\n");
-		printf("\n");
-
-		flushInput();
+    if (input != 1){
+			printf("\033[1;31mError: This is not a valid number.\033[0m\n");
+			printf("\n");
+			flushInput();
+			continue;
+		}
+			
+		break;
 	}
 
 	return value;
