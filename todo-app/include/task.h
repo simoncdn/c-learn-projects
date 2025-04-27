@@ -8,14 +8,14 @@ typedef enum TaskStatus {
 
 typedef struct Task {
 	int id;
-	char title[50];
-	char description[200];
+	char title[100];
+	char description[500];
 	taskStatus_t status;
 } task_t;
 
-void addTask(task_t *tasks, task_t task, int *count);
+void addTask(task_t *tasks, int *count);
 
-void deleteTask(task_t *tasks, int index);
+void deleteTask(task_t *tasks, int *count);
 
 void getTask(task_t *tasks, int index);
 
